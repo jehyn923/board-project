@@ -1,0 +1,17 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://${spring.datasource.env}:3306/${spring.datasource.databasename}?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: ssafy
+    password: ssafy
+    env: 15.164.229.190
+    databasename: happyhouse
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+
+server:
+  port: 8080
